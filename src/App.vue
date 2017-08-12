@@ -17,4 +17,11 @@ export default {
   * {
     box-sizing: border-box;
   }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+  }
 </style>
