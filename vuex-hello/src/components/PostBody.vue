@@ -1,12 +1,16 @@
 <template>
   <div class="post-body">
-    PostBody
+    {{post.title}}
+    <div class="like-no">
+      {{post.likes}} 赞
+    </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'post-body'
+    name: 'post-body',
+    props: ['post']
   }
 </script>
 
@@ -20,5 +24,14 @@
     text-align: center;
     color: rgba(0, 0, 0, 0.8);
     padding: 10px;
+    position: relative;
+  }
+  .like-no {
+    display: inline-block;
+    background-color: rgba(200, 200, 200, 0.5);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
   }
 </style>

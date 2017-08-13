@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <div class="upper">
-      <post-body></post-body>
+      <post-body :post="post"></post-body>
     </div>
     <div class="bottom">
       <comment-box></comment-box>
@@ -13,7 +13,17 @@
   import PostBody from './PostBody'
   import CommentBox from './CommentBox'
   export default {
-    components: { PostBody, CommentBox }
+    components: { PostBody, CommentBox },
+    data: function () {
+      return {
+        postId: this.$route.params.id
+      }
+    },
+    computed: {
+      post () {
+        return this.$store.state.post.all.find(item => item.id === this.postId)
+      }
+    }
   }
 </script>
 
