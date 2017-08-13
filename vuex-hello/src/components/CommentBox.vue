@@ -35,6 +35,9 @@
           input.value = ''
         }
       }
+    },
+    created () {
+      this.$store.dispatch('loadComments')
     }
   }
 </script>
