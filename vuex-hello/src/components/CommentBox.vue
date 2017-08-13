@@ -31,7 +31,7 @@
       submitComment () {
         let input = document.getElementById('commentForm')
         if (input.value !== '') {
-          this.comments.push({ text: input.value })
+          this.$store.commit('addComment', { text: input.value })
           input.value = ''
         }
       }
