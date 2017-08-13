@@ -18,17 +18,10 @@
 <script>
   export default {
     name: 'comment-box',
-    data: () => ({
-      comments: [
-        {
-          text: 'foo'
-        },
-        {
-          text: 'bar'
-        }
-      ]
-    }),
     computed: {
+      comments () {
+        return this.$store.state.comment.all
+      },
       reversedComments () {
         return this.comments
                .slice().reverse()
