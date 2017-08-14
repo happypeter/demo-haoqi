@@ -18,7 +18,7 @@
 <script>
   export default {
     name: 'comment-box',
-    props: ['comments'],
+    props: ['comments', 'post'],
     computed: {
       reversedComments () {
         return this.comments
@@ -29,7 +29,7 @@
       submitComment () {
         let input = document.getElementById('commentForm')
         if (input.value !== '') {
-          this.$store.commit('addComment', { text: input.value })
+          this.$store.commit('addComment', { text: input.value, post: this.post.id })
           input.value = ''
         }
       }

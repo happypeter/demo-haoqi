@@ -7,6 +7,14 @@ const state = {
 const mutations = {
   loadPosts (state, posts) {
     state.all = posts
+  },
+  like (state, postId) {
+    state.all.map(item => {
+      if (item.id === postId) {
+        item.likes++
+      }
+      return item
+    })
   }
 }
 

@@ -5,8 +5,8 @@ const state = {
 }
 
 const mutations = {
-  addComment (state, { text }) {
-    state.all.push({ text })
+  addComment (state, { text, post }) {
+    state.all.push({ text, post })
   },
   loadComments (state, comments) {
     state.all = comments

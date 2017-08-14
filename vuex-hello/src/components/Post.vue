@@ -1,10 +1,10 @@
 <template>
   <div v-if="show" class="post">
     <div class="upper">
-      <post-body :post="post"></post-body>
+      <post-body :post="post" :comments="comments"></post-body>
     </div>
     <div class="bottom">
-      <comment-box :comments="comments"></comment-box>
+      <comment-box :comments="comments" :post="post"></comment-box>
     </div>
   </div>
   <div class="loading" v-else>
