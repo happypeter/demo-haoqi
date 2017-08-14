@@ -18,10 +18,8 @@
 <script>
   export default {
     name: 'comment-box',
+    props: ['comments'],
     computed: {
-      comments () {
-        return this.$store.state.comment.all
-      },
       reversedComments () {
         return this.comments
                .slice().reverse()
@@ -35,9 +33,6 @@
           input.value = ''
         }
       }
-    },
-    created () {
-      this.$store.dispatch('loadComments')
     }
   }
 </script>

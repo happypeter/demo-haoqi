@@ -17,3 +17,4 @@ new Vue({
 })
 
 store.dispatch('loadPosts')
+store.dispatch('loadComments')

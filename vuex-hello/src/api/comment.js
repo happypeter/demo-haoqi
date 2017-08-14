@@ -1,9 +1,15 @@
 const _comments = [
   {
-    text: 'foo'
+    text: 'foo',
+    post: '1'
   },
   {
-    text: 'bar'
+    text: 'bar',
+    post: '2'
+  },
+  {
+    text: 'baz',
+    post: '1'
   }
 ]
 
