@@ -37,9 +37,21 @@
 
 
 .home-actions {
-  background-color: #fff;
   margin: 0 auto;
   width: 320px;
-  height: 56px;
   margin-bottom: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-actions > div {
+  background: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.20);
+  border-radius: 2px;
+  width: 150px;
+  height: 56px;
+  font-size: 14px;
+  line-height: 56px;
+  text-align: center;
+  color: #F77062;
 }

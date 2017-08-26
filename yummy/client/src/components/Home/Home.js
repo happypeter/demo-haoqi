@@ -13,6 +13,13 @@ export default () => (
         享受舌尖艳遇
       </div>
     </div>
-    <div className='home-actions'>Actions</div>
+    <div className='home-actions'>
+      <div>
+        注册
+      </div>
+      <div>
+        登录
+      </div>
+    </div>
   </div>
 )
