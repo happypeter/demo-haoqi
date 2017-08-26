@@ -1,0 +1,30 @@
+.layout {
+  height: 100vh;
+  background-image: linear-gradient(-45deg, #F77062 0%, #FE5196 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-header {
+  height: 80px;
+  padding-top: 45px;
+  line-height: 14px;
+  padding-bottom: 21px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+}
+
+.layout-main {
+  background-color: yellow;
+  flex-grow: 1;
+  position: relative;
+}
+
+.layout-main-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

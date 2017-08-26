@@ -1,0 +1,8 @@
+.dish {
+  min-height: 100%;
+}
+
+.dish-content {
+  height: 1000px;
+  background-color: #fff;
+}

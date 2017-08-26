@@ -1,5 +1,7 @@
 import React from 'react'
 
 export default () => (
-  <div>Header</div>
+  <div className='signup'>
+    signup
+  </div>
 )
