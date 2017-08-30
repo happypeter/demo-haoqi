@@ -1,6 +1,7 @@
 import React from 'react'
 import './home.css'
 import logo from './logo.svg'
+import { Link } from 'react-router-dom'
 
 export default () => (
   <div className='home'>
@@ -14,12 +15,12 @@ export default () => (
       </div>
     </div>
     <div className='home-actions'>
-      <div>
+      <Link to='/signup'>
         注册
-      </div>
-      <div>
+      </Link>
+      <Link to='/login'>
         登录
-      </div>
+      </Link>
     </div>
   </div>
 )
