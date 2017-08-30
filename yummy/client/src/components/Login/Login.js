@@ -13,8 +13,17 @@ const fields = [
   }
 ]
 
+const option = {
+  text: '没有账号，请先注册',
+  link: '/signup'
+}
+
+const title = '登录'
 export default () => (
   <div className='login'>
-    <Form fields={fields} />
+    <Form fields={fields}
+      title={title}
+      option={option}
+      />
   </div>
 )

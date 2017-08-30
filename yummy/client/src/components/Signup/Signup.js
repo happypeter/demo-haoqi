@@ -21,8 +21,18 @@ const fields = [
   }
 ]
 
+const title = '注册'
+
+const option = {
+  text: '已有账号，直接登录',
+  link: '/login'
+}
+
 export default () => (
   <div className='signup'>
-    <Form fields={fields} />
+    <Form
+      title={title}
+      option={option}
+      fields={fields} />
   </div>
 )
