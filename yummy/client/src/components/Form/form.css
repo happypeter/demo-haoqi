@@ -12,6 +12,12 @@
   text-align: center;
 }
 
+@media (min-width: 400px) {
+  .form-hero {
+    margin-top: 40px;
+  }
+}
+
 .form-title {
   font-size: 36px;
   line-height: 42px;
