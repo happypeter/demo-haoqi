@@ -7,7 +7,16 @@
   padding: 0 30px;
 }
 
-.dish-card {
-  background-color: #fff;
-  height: 75vh;
+.slick-dots {
+  bottom: -40px;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: .9;
+  color: white;
+}
+
+.slick-dots li button:before {
+  opacity: .4;
+  color: white;
 }

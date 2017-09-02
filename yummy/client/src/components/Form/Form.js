@@ -9,6 +9,7 @@ class Form extends Component {
       obj[t.name] = this[t.refName].value
       return obj
     }, {})
+    console.log(data)
     this.myForm.reset()
   }
 

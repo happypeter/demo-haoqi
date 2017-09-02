@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import './dishes.css'
 import Slider from 'react-slick'
+import DishCard from './DishCard'
 
 class Dishes extends Component {
   render () {
@@ -17,14 +18,10 @@ class Dishes extends Component {
 
     const slides = [
       <div className='dish-card-wrap' key='1'>
-        <div className='dish-card'>
-          1
-        </div>
+        <DishCard />
       </div>,
       <div className='dish-card-wrap' key='2'>
-        <div className='dish-card'>
-          2
-        </div>
+        <DishCard />
       </div>
     ]
 
