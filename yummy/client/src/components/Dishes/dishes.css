@@ -1,0 +1,13 @@
+.dishes {
+  height: 100%;
+}
+
+.dish-card-wrap {
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
+.dish-card {
+  background-color: #fff;
+  height: 75vh;
+}

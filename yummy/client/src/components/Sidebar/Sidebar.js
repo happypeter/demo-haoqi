@@ -39,6 +39,9 @@ export default class Sidebar extends React.Component {
             <Link
               onClick={this.closeMenu}
               className='menu-item' to='/login'>登录</Link>
+            <Link
+              onClick={this.closeMenu}
+              className='menu-item' to='/dishes'>猜你喜欢</Link>
           </div>
           <div className='bottom-button'>
             <button

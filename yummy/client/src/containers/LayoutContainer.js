@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import LoginContainer from './LoginContainer'
 import SignupContainer from './SignupContainer'
 import DishContainer from './DishContainer'
+import DishesContainer from './DishesContainer'
 import Layout from '../components/Layout/Layout'
 import NotFound from '../components/NotFound'
 import {
@@ -18,6 +19,7 @@ class LayoutContainer extends Component {
             <Route path='/login' component={LoginContainer} />
             <Route path='/signup' component={SignupContainer} />
             <Route path='/dish' component={DishContainer} />
+            <Route path='/dishes' component={DishesContainer} />
             <Route component={NotFound} />
           </Switch>
         </Layout>
