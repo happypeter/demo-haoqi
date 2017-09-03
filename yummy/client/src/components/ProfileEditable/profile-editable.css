@@ -1,0 +1,76 @@
+
+.profile-editable {
+  display: flex;
+  padding: 20px
+}
+
+label.profile-upload-img {
+  outline: 0;
+  border: 0;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30);
+  background-size: 150px;
+  background-position: center center;
+}
+
+.profile-image-input {
+  width: 0;
+  height: 0;
+}
+
+.profile-image-input:focus {
+  outline: 0;
+  border: 0;
+}
+
+.profile-username-slogan {
+  padding: 10px;
+  color: white;
+  flex-grow: 1;
+}
+
+.profile-username {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.profile-slogan {
+  font-size: 15px;
+  opacity: .8;
+}
+
+.profile-edit-btn {
+  padding: 25px 10px;
+}
+
+.profile-form button {
+  color: white;
+  outline: 0;
+  background: none;
+  border: none;
+}
+
+.profile-slogan-input {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border-bottom: 1px solid white;
+  font-size: 15px;
+}
+.profile-slogan-input:focus {
+  border: 0;
+  border-bottom: 1px solid white;
+  outline: 0;
+}
+.profile-slogan-input::placeholder {
+  color: white;
+  font-size: 15px;
+}
+
+.profile-details {
+  min-height: 40vh;
+  background: #F9FAFB;
+}

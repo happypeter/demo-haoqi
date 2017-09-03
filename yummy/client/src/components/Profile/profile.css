@@ -1,0 +1,14 @@
+.profile {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-editable-wrap {
+  flex-shrink: 0;
+}
+
+.profile-details {
+  flex-grow: 1;
+  overflow: auto;
+}
