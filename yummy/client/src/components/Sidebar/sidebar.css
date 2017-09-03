@@ -85,11 +85,9 @@
   flex-grow: 2;
 }
 
-.sidebar-avatar {
+.sidebar-avatar-wrap {
   height: 100px;
   width: 100px;
-  background-color: teal;
-  border-radius: 50%;
   margin: 0 auto;
 }
 

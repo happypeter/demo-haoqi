@@ -3,6 +3,7 @@ import LoginContainer from './LoginContainer'
 import SignupContainer from './SignupContainer'
 import DishContainer from './DishContainer'
 import DishesContainer from './DishesContainer'
+import DashboardContainer from './DashboardContainer'
 import ProfileContainer from './ProfileContainer'
 import Layout from '../components/Layout/Layout'
 import NotFound from '../components/NotFound'
@@ -22,6 +23,7 @@ class LayoutContainer extends Component {
             <Route path='/dish' component={DishContainer} />
             <Route path='/dishes' component={DishesContainer} />
             <Route path='/profile' component={ProfileContainer} />
+            <Route path='/dashboard' component={DashboardContainer} />
             <Route component={NotFound} />
           </Switch>
         </Layout>

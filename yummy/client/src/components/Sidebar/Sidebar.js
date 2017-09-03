@@ -1,6 +1,7 @@
 import React from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import { Link } from 'react-router-dom'
+import Avatar from '../Avatar/Avatar'
 import './sidebar.css'
 
 let userInfoText = (
@@ -29,7 +30,9 @@ export default class Sidebar extends React.Component {
           customCrossIcon={false}
           >
           <div className='sidebar-user-info'>
-            <div className='sidebar-avatar' />
+            <div className='sidebar-avatar-wrap'>
+              <Avatar size='100' />
+            </div>
             {userInfoText}
           </div>
           <div className='bm-link-list'>
@@ -45,6 +48,9 @@ export default class Sidebar extends React.Component {
             <Link
               onClick={this.closeMenu}
               className='menu-item' to='/profile'>个人中心</Link>
+            <Link
+              onClick={this.closeMenu}
+              className='menu-item' to='/dashboard'>操作盘</Link>
           </div>
           <div className='bottom-button'>
             <button

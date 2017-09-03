@@ -1,11 +1,10 @@
 import React from 'react'
 import './avatar.css'
 
-
-export default () => (
+export default ({ size }) => (
   <div style={{
-      width: '50px',
-      height: '50px'
-    }}
+    width: `${size}px`,
+    height: `${size}px`
+  }}
     className='avatar' />
 )
