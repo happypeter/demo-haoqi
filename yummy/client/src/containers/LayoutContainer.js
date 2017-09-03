@@ -8,6 +8,7 @@ import ProfileContainer from './ProfileContainer'
 import Layout from '../components/Layout/Layout'
 import NotFound from '../components/NotFound'
 import CartButtonContainer from './CartButtonContainer'
+import CartContainer from './CartContainer'
 import {
   Switch,
   Route
@@ -25,6 +26,7 @@ class LayoutContainer extends Component {
             <Route path='/dishes' component={DishesContainer} />
             <Route path='/profile' component={ProfileContainer} />
             <Route path='/dashboard' component={DashboardContainer} />
+            <Route path='/cart' component={CartContainer} />
             <Route component={NotFound} />
           </Switch>
           <CartButtonContainer />

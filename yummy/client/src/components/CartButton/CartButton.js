@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import cartIcon from './cartIcon.svg'
 import './cart-button.css'
 import {
@@ -11,6 +11,6 @@ export default () => (
     <div className='cart-count'>
       3
     </div>
-    <img src={cartIcon} alt="icon" />
+    <img src={cartIcon} alt='icon' />
   </Link>
 )
