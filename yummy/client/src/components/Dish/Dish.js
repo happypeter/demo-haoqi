@@ -3,6 +3,7 @@ import './dish.css'
 import ShoppingIcon from '../ShoppingIcon'
 import PieChart from './PieChart'
 import AreaChart from './AreaChart'
+import Comment from './Comment'
 
 export default () => (
   <div className='dish'>
@@ -29,6 +30,7 @@ export default () => (
         <h1 className='dish-sub-title'>销售额</h1>
         <AreaChart />
         <h1 className='dish-sub-title'>评论区</h1>
+        <Comment />
       </div>
     </div>
   </div>

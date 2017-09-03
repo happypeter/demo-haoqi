@@ -24,6 +24,7 @@
 }
 
 .dish-info-card {
+  box-sizing: border-box;
   min-height: 300px;
   width: 100%;
   margin-top: 10px;
