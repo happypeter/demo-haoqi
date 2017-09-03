@@ -7,6 +7,7 @@ import DashboardContainer from './DashboardContainer'
 import ProfileContainer from './ProfileContainer'
 import Layout from '../components/Layout/Layout'
 import NotFound from '../components/NotFound'
+import CartButtonContainer from './CartButtonContainer'
 import {
   Switch,
   Route
@@ -26,6 +27,7 @@ class LayoutContainer extends Component {
             <Route path='/dashboard' component={DashboardContainer} />
             <Route component={NotFound} />
           </Switch>
+          <CartButtonContainer />
         </Layout>
       </div>
     )
