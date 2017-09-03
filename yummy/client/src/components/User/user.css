@@ -1,0 +1,68 @@
+.user {
+  height: 100%;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.user-info-wrap {
+  height: 100%;
+  box-sizing: border-box;
+  background: #F9FAFB;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.user-avatar-wrap {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  top: -60px;
+}
+
+.user-name {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 26px;
+  color: #F77062;
+  line-height: 32px;
+}
+
+.user-info-card {
+  background: #FFFFFF;
+  margin-top: 50px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  font-size: 16px;
+  color: #878787;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-top: 0;
+  text-align: center;
+  flex-grow: 1;
+  margin-bottom: 5px;
+}
+
+.user-info-card-title {
+  line-height: 24px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  color: #F77062;
+}
+
+.friend-button {
+  background-image: linear-gradient(-45deg, #F77062 0%, #FE5196 100%);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.20);
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 56px;
+  text-align: center;
+  color: #FFFFFF;
+}
