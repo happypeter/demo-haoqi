@@ -6,11 +6,13 @@ import {
 } from 'react-router-dom'
 import HomeContainer from './HomeContainer'
 import LayoutContainer from './LayoutContainer'
+import AlertBoxContainer from './AlertBoxContainer'
 
 class App extends Component {
   render () {
     return (
       <div>
+        <AlertBoxContainer />
         <Router>
           <Switch>
             <Route exact path='/' component={HomeContainer} />

@@ -1,0 +1,50 @@
+.alert-box {
+  background: rgba(4,4,4,0.43);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: opacity .3s ease;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.alert-box.show {
+  opacity: 1;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: auto;
+}
+
+.alert-box .alert-box-card {
+  margin: 0 auto;
+  background: #fff;
+  width: 0;
+  transition: opacity .3s ease;
+  opacity: 0;
+  padding-bottom: 10px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.alert-box.show .alert-box-card {
+  opacity: 1;
+  width: 240px;
+  padding: 20px;
+}
+
+.alert-box .alert-box-card .alert-actions {
+  display: none;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #F77062;
+}
+
+.alert-box.show .alert-box-card .alert-actions {
+  display: block;
+}
