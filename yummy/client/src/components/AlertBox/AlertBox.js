@@ -3,6 +3,10 @@ import './alert-box.css'
 
 class AlertBox extends Component {
 
+  state = {
+    show: true
+  }
+
   componentDidMount = () => {
     var fixed = document.getElementById('fixed');
     fixed.addEventListener('touchmove', (e) => {
@@ -13,12 +17,19 @@ class AlertBox extends Component {
     });
   }
 
+  handleClick = () => {
+    this.setState({
+      show: false
+    })
+  }
+
   render() {
     return(
-      <div id="fixed" className={"alert-box show"}>
+      <div id="fixed" className={`alert-box ${this.state.show && 'show'}`}>
         <div className="alert-box-card">
           警告信息
-          <div className="alert-actions">
+          <div onClick={this.handleClick}
+            className="alert-actions">
             关闭
           </div>
         </div>
