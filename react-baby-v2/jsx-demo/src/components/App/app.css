@@ -1,0 +1,20 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: red;
+  height: 50px;
+}
+
+.main {
+  flex-grow: 1;
+  background-color: pink;
+}
+
+.footer {
+  background-color: blue;
+  height: 50px;
+}
