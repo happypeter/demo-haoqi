@@ -58,7 +58,7 @@
   outline: 0;
 }
 
-.form input:placeholder {
+.form input::placeholder {
   font-size: 12px;
   color: #878787;
 }
