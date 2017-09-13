@@ -4,20 +4,30 @@ import axios from 'axios'
 class Post extends Component {
 
   state = {
-    post: {}
+    posts: [
+      {
+        id: '134',
+        title: 'Git 使用技巧',
+        content: 'main content'
+      },
+      {
+        id: '256',
+        title: '命令使用技巧',
+        content: 'main content'
+      },
+      {
+        id: '545',
+        title: 'Github 基础',
+        content: 'main content'
+      }
+    ]
   }
 
-  componentDidMount = () => {
-    const { id } = this.props.match.params
-    axios.get(`http://localhost:3008/posts/${id}`).then(res => {
-      console.log(res.data)
-      this.setState({
-        post: res.data
-      })
-    })
-  }
+
   render () {
-    const { post } = this.state
+    const { posts } = this.state
+    const { id } = this.props.match.params
+    const post = posts.find(t => t.id === id)
     return (
       <div className='post'>
         <h1>

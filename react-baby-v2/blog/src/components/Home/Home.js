@@ -7,21 +7,25 @@ import axios from 'axios'
 
 class Home extends Component {
 
-
   state = {
-    posts: []
+    posts: [
+      {
+        id: '134',
+        title: 'Git 使用技巧',
+        content: 'main content'
+      },
+      {
+        id: '256',
+        title: '命令使用技巧',
+        content: 'main content'
+      },
+      {
+        id: '545',
+        title: 'Github 基础',
+        content: 'main content'
+      }
+    ]
   }
-
-  componentDidMount = () => {
-    console.log('componentDidMount')
-    axios.get('http://localhost:3008/posts').then(res => {
-      console.log(res.data)
-      this.setState({
-        posts: res.data
-      })
-    })
-  }
-
 
   render () {
     const postList = this.state.posts.map((t, i) => (
