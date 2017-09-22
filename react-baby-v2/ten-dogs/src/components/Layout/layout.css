@@ -1,0 +1,29 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  background-color: #00bcd4;
+  padding: 10px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+.main-wrap {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.footer {
+  padding: 10px;
+  text-align: center;
+  background-color: #212121;
+  color: white;
+}
