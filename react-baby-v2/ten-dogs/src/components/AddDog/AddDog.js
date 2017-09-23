@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import AddIcon from './add.svg'
 import './add-dog.css'
+import axios from 'axios'
 
 class AddDog extends Component {
   state = {
@@ -15,12 +16,23 @@ class AddDog extends Component {
   }
 
   handleSubmit = () => {
-    console.log(this.state.imgUrl)
+    const { imgUrl } = this.state
+    const data = {
+      imgUrl
+    }
+    axios.post('http://localhost:3008/dogs', data).then(
+      res => {
+        console.log(res.data)
+        this.toggleForm()
+        this.props.addDog(res.data)
+      }
+    )
   }
-  
+
   toggleForm = () => {
     this.setState({
-      showForm: !this.state.showForm
+      showForm: !this.state.showForm,
+      imgUrl: ''
     })
   }
 

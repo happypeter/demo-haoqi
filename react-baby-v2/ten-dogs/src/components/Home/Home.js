@@ -9,6 +9,14 @@ class Home extends Component {
     dogs: []
   }
 
+  addDog = (dog) => {
+    this.setState({
+      dogs: [
+        ...this.state.dogs,
+        dog
+      ]
+    })
+  }
   componentDidMount () {
     axios.get('http://localhost:3008/dogs').then( res => {
       this.setState({
@@ -27,7 +35,7 @@ class Home extends Component {
       <div className='home'>
         <div className='dog-list'>
           {dogList}
-          <AddDog />
+          <AddDog addDog={this.addDog}/>
         </div>
       </div>
     )
