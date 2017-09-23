@@ -1,0 +1,13 @@
+.dog img {
+  width: 140px;
+  height: 140px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 50%;
+  animation: dog-spin infinite 10s linear;
+}
+
+@keyframes dog-spin {
+  from { transform: rotate(0deg);}
+  to   { transform: rotate(360deg);}
+}
