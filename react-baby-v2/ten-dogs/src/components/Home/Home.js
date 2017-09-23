@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './home.css'
 import DogIcon from '../DogIcon/DogIcon'
 import axios from 'axios'
+import AddDog from '../AddDog/AddDog'
 
 class Home extends Component {
   state = {
@@ -26,6 +27,7 @@ class Home extends Component {
       <div className='home'>
         <div className='dog-list'>
           {dogList}
+          <AddDog />
         </div>
       </div>
     )
