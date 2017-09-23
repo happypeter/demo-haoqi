@@ -17,6 +17,13 @@ class Home extends Component {
       ]
     })
   }
+
+  updateDogs = (id) => {
+    this.setState({
+      dogs: this.state.dogs.filter( t => t.id !== id)
+    })
+  }
+
   componentDidMount () {
     axios.get('http://localhost:3008/dogs').then( res => {
       this.setState({
@@ -28,7 +35,7 @@ class Home extends Component {
   render () {
     const dogList = this.state.dogs.map(t => (
       <div key={t.id} className='dog-icon-wrap'>
-        <DogIcon  dog={t} />
+        <DogIcon  dog={t} updateDogs={this.updateDogs} />
       </div>
     ))
     return (
