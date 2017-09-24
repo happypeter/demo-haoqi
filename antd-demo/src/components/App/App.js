@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
-import './app.css';
-import Button from 'antd/lib/button';
+import React, { Component } from 'react'
+import './app.css'
+import {
+  BrowserRouter as Router
+} from 'react-router-dom'
+import Main from '../Main/Main'
 
 
 class App extends Component {
   render() {
     return (
-      <div className="app">
-        <Button type="primary">购买</Button>
-        <Button>取消</Button>
-      </div>
-    );
+      <Router>
+        <Main />
+      </Router>
+    )
   }
 }
 
