@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import {
+  withRouter
+} from 'react-router-dom'
 
 const SidebarWrap = styled.div`
   height: 100%;
@@ -23,10 +26,30 @@ const NavWrap = styled.div`
 const LogoutWrap = styled.div`
   height: 60px;
   line-height: 60px;
-  background: #ececec;
+  display: flex;
 `
 
+const LogoutText = styled.div`
+  flex-basis: 60px;
+  text-align: center;
+  background: #ff8a00;
+  color: white;
+  cursor: pointer;
+`
+
+const Username = styled.div`
+  padding-left: 10px;
+  background: #ececec;
+  flex-grow: 1;
+  color: #212121;
+`
+
+
 class Sidebar extends Component {
+  logout = () => {
+    this.props.history.push('/')
+  }
+
   render () {
     return (
       <SidebarWrap>
@@ -37,11 +60,18 @@ class Sidebar extends Component {
           导航栏
         </NavWrap>
         <LogoutWrap>
-          退出
+          <LogoutText
+            onClick={this.logout}
+            >
+            退出
+          </LogoutText>
+          <Username>
+            Admin
+          </Username>
         </LogoutWrap>
       </SidebarWrap>
     )
   }
 }
 
-export default Sidebar
+export default withRouter(Sidebar)

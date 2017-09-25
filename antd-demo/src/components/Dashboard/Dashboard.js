@@ -8,7 +8,7 @@ const DashboardWrap = styled.div`
 `
 
 const SideWrap = styled.div`
-  flex-basis: 150px;
+  flex-basis: 200px;
 `
 
 const MainWrap = styled.div`
