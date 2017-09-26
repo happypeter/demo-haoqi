@@ -47,6 +47,7 @@ const Username = styled.div`
 
 class Sidebar extends Component {
   logout = () => {
+    window.localStorage.removeItem('secret')
     this.props.history.push('/')
   }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import LoginForm from '../LoginForm/LoginForm'
 import styled from 'styled-components'
+import Settings from '../../settings'
 
 const FormWrap = styled.div`
   border: 1px solid #ddd;
@@ -12,6 +13,8 @@ const FormWrap = styled.div`
 class Home extends Component {
 
   login = () => {
+    const { secret } = Settings.user
+    window.localStorage.setItem('secret', secret)
     this.props.history.push('/dashboard')
   }
 
