@@ -28,6 +28,10 @@ const TopHeader = styled.div`
   background: #404040;
 `
 
+const ContentWrap = styled.div`
+ padding: 10px;
+`
+
 class Dashboard extends Component {
   render () {
     return (
@@ -37,12 +41,14 @@ class Dashboard extends Component {
         </SideWrap>
         <MainWrap>
           <TopHeader />
-          <Switch>
-            <Route path='/dashboard/orders/completed' component={CompletedOrders} />
-            <Route path='/dashboard/orders' component={Orders} />
-            <Route path='/dashboard/dishes/new' component={NewDish} />
-            <Route path='/dashboard/dishes' component={Dishes} />
-          </Switch>
+          <ContentWrap>
+            <Switch>
+              <Route path='/dashboard/orders/completed' component={CompletedOrders} />
+              <Route path='/dashboard/orders' component={Orders} />
+              <Route path='/dashboard/dishes/new' component={NewDish} />
+              <Route path='/dashboard/dishes' component={Dishes} />
+            </Switch>
+          </ContentWrap>
         </MainWrap>
       </DashboardWrap>
     )

@@ -15,7 +15,7 @@ class Home extends Component {
   login = () => {
     const { secret } = Settings.user
     window.localStorage.setItem('secret', secret)
-    this.props.history.push('/dashboard')
+    this.props.history.push('/dashboard/dishes')
   }
 
   render () {
