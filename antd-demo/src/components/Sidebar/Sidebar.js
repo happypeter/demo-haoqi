@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import {
   withRouter
 } from 'react-router-dom'
+import { Menu, Icon } from 'antd'
+const SubMenu = Menu.SubMenu
 
 const SidebarWrap = styled.div`
   height: 100%;
@@ -51,6 +53,11 @@ class Sidebar extends Component {
     this.props.history.push('/')
   }
 
+  handleClick = (e) => {
+    console.log(e.key)
+    this.props.history.push(e.key)
+  }
+
   render () {
     return (
       <SidebarWrap>
@@ -58,7 +65,22 @@ class Sidebar extends Component {
           好奇后台
         </LogoWrap>
         <NavWrap>
-          导航栏
+          <Menu
+            onClick={this.handleClick}
+            style={{ width: 240 }}
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['orders', 'dishes']}
+            mode="inline"
+          >
+            <SubMenu key="orders" title={<span><Icon type="file" /><span>订单</span></span>}>
+              <Menu.Item key="/dashboard/orders">未发货</Menu.Item>
+              <Menu.Item key="/dashboard/orders/completed">已发货</Menu.Item>
+            </SubMenu>
+            <SubMenu key="dishes" title={<span><Icon type="heart" /><span>甜点</span></span>}>
+              <Menu.Item key="/dashboard/dishes">所有</Menu.Item>
+              <Menu.Item key="/dashboard/dishes/new">新建</Menu.Item>
+            </SubMenu>
+          </Menu>
         </NavWrap>
         <LogoutWrap>
           <LogoutText
