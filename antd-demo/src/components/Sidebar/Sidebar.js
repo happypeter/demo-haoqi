@@ -48,6 +48,11 @@ const Username = styled.div`
 
 
 class Sidebar extends Component {
+  state = {
+    selectedKeys: [
+      this.props.history.location.pathname
+    ]
+  }
   logout = () => {
     window.localStorage.removeItem('secret')
     this.props.history.push('/')
@@ -56,6 +61,9 @@ class Sidebar extends Component {
   handleClick = (e) => {
     console.log(e.key)
     this.props.history.push(e.key)
+    this.setState({
+      selectedKeys: [e.key]
+    })
   }
 
   render () {
@@ -68,7 +76,7 @@ class Sidebar extends Component {
           <Menu
             onClick={this.handleClick}
             style={{ width: 240 }}
-            defaultSelectedKeys={['1']}
+            selectedKeys={this.state.selectedKeys}
             defaultOpenKeys={['orders', 'dishes']}
             mode="inline"
           >
