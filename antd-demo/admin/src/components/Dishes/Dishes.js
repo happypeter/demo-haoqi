@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Table } from 'antd'
+import { Table, message } from 'antd'
 import styled from 'styled-components'
 import {
   Link
@@ -20,6 +20,18 @@ class Dishes extends Component {
       res => {
         this.setState({
           dishes: res.data
+        })
+      }
+    )
+  }
+
+  handleClick = (e, id) => {
+    e.preventDefault()
+    axios.delete(`http://localhost:3008/dishes/${id}`).then(
+      res => {
+        message.info('删除成功了！')
+        this.setState({
+          dishes: this.state.dishes.filter(t => t.id !== id)
         })
       }
     )
@@ -45,7 +57,8 @@ class Dishes extends Component {
     },{
       title: '操作',
       key: 'actions',
-      render: () => <Link to=''>删除</Link>
+      dataIndex: 'id',
+      render: (id) => <Link to='' onClick={(e) => this.handleClick(e, id)}>删除</Link>
     }]
     return (
       <div className='dishes'>
