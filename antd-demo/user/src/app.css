@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+  background: #00bcd4;
+  color: white;
+  padding: 20px;
+}
+
+.dish-list {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.dish {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.name, .action {
+  flex-basis: 70px;
+}
+
+.price {
+  flex-grow: 1;
+  padding-left: 30px;
+}
