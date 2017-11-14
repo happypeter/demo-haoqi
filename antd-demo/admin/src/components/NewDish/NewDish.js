@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Form, Input, Button, Icon, message } from 'antd'
 import styled from 'styled-components'
 import axios from 'axios'
+import {
+  withRouter
+} from 'react-router-dom'
 
 const NewDishWrap = styled.div`
   max-width: 950px;
@@ -24,7 +27,9 @@ class NewDish extends Component {
       axios.post(`http://localhost:3008/dishes`, allData).then(
         res => {
           console.log(res.data)
-          this.props.history.push('/dashboard/dishes')
+          const targetPath = '/dashboard/dishes'
+          this.props.history.push(targetPath)
+          this.props.updateSelectedKeys([targetPath])
         }
       )
     } else {
@@ -71,4 +76,4 @@ class NewDish extends Component {
   }
 }
 
-export default Form.create()(NewDish)
+export default Form.create()(withRouter(NewDish))

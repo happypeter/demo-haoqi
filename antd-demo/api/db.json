@@ -18,31 +18,31 @@
       "name": "黑森林",
       "price": 24,
       "poster": "https://avatars3.githubusercontent.com/u/72467?v=4&s=460",
-      "completed": false,
+      "completed": true,
       "id": "HyIuD92iZ"
+    },
+    {
+      "name": "半熟芝士",
+      "price": "1",
+      "poster": "https://avatars3.githubusercontent.com/u/72467?v=4&s=460",
+      "completed": false,
+      "id": "ry-Qs0poW"
     }
   ],
   "dishes": [
     {
-      "id": "2343",
+      "name": "x",
+      "desc": "x",
+      "price": "1",
       "poster": "https://avatars3.githubusercontent.com/u/72467?v=4&s=460",
-      "name": "黑森林",
-      "price": 24,
-      "desc": "来自德国"
+      "id": "rJxvUA6o-"
     },
     {
-      "name": "ddd",
-      "desc": "d",
-      "price": "11",
+      "name": "半熟芝士",
+      "desc": "好吃",
+      "price": "1",
       "poster": "https://avatars3.githubusercontent.com/u/72467?v=4&s=460",
-      "id": "S1zMYmFsb"
-    },
-    {
-      "name": "xx",
-      "desc": "xx",
-      "price": "2",
-      "poster": "https://avatars3.githubusercontent.com/u/72467?v=4&s=460",
-      "id": "H17tV53j-"
+      "id": "ByEfjC6sZ"
     }
   ]
 }

@@ -7,7 +7,8 @@ import CompletedOrders from '../CompletedOrders/CompletedOrders'
 import NewDish from '../NewDish/NewDish'
 import {
   Route,
-  Switch
+  Switch,
+  withRouter
 } from 'react-router-dom'
 
 const DashboardWrap = styled.div`
@@ -33,11 +34,23 @@ const ContentWrap = styled.div`
 `
 
 class Dashboard extends Component {
+  state = {
+    selectedKeys: [
+      this.props.history.location.pathname
+    ]
+  }
+
+  updateSelectedKeys = (selectedKeys) => {
+    this.setState({
+      selectedKeys
+    })
+  }
   render () {
     return (
       <DashboardWrap>
         <SideWrap>
-          <Sidebar />
+          <Sidebar updateSelectedKeys={this.updateSelectedKeys}
+            selectedKeys={this.state.selectedKeys}/>
         </SideWrap>
         <MainWrap>
           <TopHeader />
@@ -45,7 +58,9 @@ class Dashboard extends Component {
             <Switch>
               <Route path='/dashboard/orders/completed' component={CompletedOrders} />
               <Route path='/dashboard/orders' component={Orders} />
-              <Route path='/dashboard/dishes/new' component={NewDish} />
+              <Route path='/dashboard/dishes/new' render={
+                () => <NewDish updateSelectedKeys={this.updateSelectedKeys} />
+              } />
               <Route path='/dashboard/dishes' component={Dishes} />
             </Switch>
           </ContentWrap>
@@ -55,4 +70,4 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard
+export default withRouter(Dashboard)
