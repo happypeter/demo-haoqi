@@ -1,41 +1,15 @@
-import React, { Component } from 'react'
-import LoginContainer from './LoginContainer'
-import SignupContainer from './SignupContainer'
-import DishContainer from './DishContainer'
-import DishesContainer from './DishesContainer'
-import DashboardContainer from './DashboardContainer'
-import ProfileContainer from './ProfileContainer'
-import Layout from '../components/Layout/Layout'
-import NotFound from '../components/NotFound'
-import CartButtonContainer from './CartButtonContainer'
-import CartContainer from './CartContainer'
-import UserContainer from './UserContainer'
-import {
-  Switch,
-  Route
-} from 'react-router-dom'
+import React from 'react'
+import Layout from '../components/Layout'
+import { getTitle, getShowAlert } from '../selectors/commonSelectors'
+import { getIsAuthenticated } from '../selectors/authSelectors'
+import { connect } from 'react-redux'
 
-class LayoutContainer extends Component {
-  render () {
-    return (
-      <div>
-        <Layout>
-          <Switch>
-            <Route path='/login' component={LoginContainer} />
-            <Route path='/signup' component={SignupContainer} />
-            <Route path='/dish' component={DishContainer} />
-            <Route path='/dishes' component={DishesContainer} />
-            <Route path='/profile' component={ProfileContainer} />
-            <Route path='/dashboard' component={DashboardContainer} />
-            <Route path='/cart' component={CartContainer} />
-            <Route path="/user/:id" component={UserContainer} />
-            <Route component={NotFound} />
-          </Switch>
-          <CartButtonContainer />
-        </Layout>
-      </div>
-    )
-  }
-}
+const LayoutContainer = props => <Layout {...props} />
 
-export default LayoutContainer
+const mapStateToProps = state => ({
+  title: getTitle(state),
+  showAlert: getShowAlert(state),
+  isAuthenticated: getIsAuthenticated(state)
+})
+
+export default connect(mapStateToProps)(LayoutContainer)

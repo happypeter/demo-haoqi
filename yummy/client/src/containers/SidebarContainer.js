@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
-import Sidebar from '../components/Sidebar/Sidebar'
+import React from 'react'
+import Sidebar from '../components/Sidebar'
+import { getIsAuthenticated, getCurrentUser } from '../selectors/authSelectors'
+import { logout } from '../actions/authActions'
+import { connect } from 'react-redux'
 
+const SidebarContainer = props => <Sidebar {...props} />
 
-class SidebarContainer extends Component {
-  render () {
-    return (
-      <Sidebar />
-    )
-  }
-}
+const mapStateToProps = state => ({
+  isAuthenticated: getIsAuthenticated(state),
+  currentUser: getCurrentUser(state)
+})
 
-export default SidebarContainer
+export default connect(mapStateToProps, {
+  logout
+})(SidebarContainer)

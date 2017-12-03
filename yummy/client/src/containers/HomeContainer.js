@@ -1,12 +1,6 @@
-import React, { Component } from 'react'
-import Home from '../components/Home/Home'
+import React from 'react'
+import Home from '../components/Home'
 
-class HomeContainer extends Component {
-  render () {
-    return (
-      <Home />
-    )
-  }
-}
+const HomeContainer = props => <Home {...props} />
 
 export default HomeContainer

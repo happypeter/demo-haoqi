@@ -1,27 +1,36 @@
 import React, { Component } from 'react'
+import '../assets/global.css'
+import HomeContainer from './HomeContainer'
+import { fetchCurrentUser } from '../actions/authActions'
+import LayoutContainer from './LayoutContainer'
+import { fetchUsers } from '../actions/userActions'
+import { connect } from 'react-redux'
+import { Router } from 'react-router'
+import { history } from '../utils/routerUtils'
 import {
-  BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom'
-import HomeContainer from './HomeContainer'
-import LayoutContainer from './LayoutContainer'
-import AlertBoxContainer from './AlertBoxContainer'
 
 class App extends Component {
+  componentDidMount () {
+    this.props.fetchUsers()
+    this.props.fetchCurrentUser()
+  }
+
   render () {
     return (
-      <div>
-        <AlertBoxContainer />
-        <Router>
-          <Switch>
-            <Route exact path='/' component={HomeContainer} />
-            <Route component={LayoutContainer} />
-          </Switch>
-        </Router>
-      </div>
+      <Router history={history} >
+        <Switch>
+          <Route exact path='/' component={HomeContainer} />
+          <Route component={LayoutContainer} />
+        </Switch>
+      </Router>
     )
   }
 }
 
-export default App
+export default connect(null, {
+  fetchUsers,
+  fetchCurrentUser
+})(App)

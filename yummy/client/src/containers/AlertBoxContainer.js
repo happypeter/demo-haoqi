@@ -1,12 +1,14 @@
-import React, { Component } from 'react'
-import AlertBox from '../components/AlertBox/AlertBox'
+import React from 'react'
+import AlertBox from '../components/AlertBox'
+import { getAlertMsg } from '../selectors/commonSelectors'
+import { hideAlert } from '../actions/commonActions'
+import { connect } from 'react-redux'
 
-class AlertBoxContainer extends Component {
-  render () {
-    return (
-      <AlertBox />
-    )
-  }
-}
+const AlertBoxContainer = props => <AlertBox {...props} />;
 
-export default AlertBoxContainer
+const mapStateToProps = state => ({
+  alertMsg: getAlertMsg(state)
+})
+export default connect(mapStateToProps, {
+  hideAlert
+})(AlertBoxContainer)

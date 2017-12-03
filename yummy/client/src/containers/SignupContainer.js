@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import Signup from '../components/Signup/Signup'
+import React from 'react'
+import Signup from '../components/Signup'
+import { setTitle } from '../actions/commonActions'
+import { connect } from 'react-redux'
+import { signup } from '../actions/authActions'
 
-class SignupContainer extends Component {
-  render () {
-    return (
-      <Signup />
-    )
-  }
-}
+const SignupContainer = props => <Signup {...props} />
 
-export default SignupContainer
+export default connect(null, {
+  setTitle,
+  signup
+})(SignupContainer)
