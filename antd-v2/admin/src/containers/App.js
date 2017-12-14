@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   render () {
-    const { isAuthenticated } = this.props
     return (
       <Router history={history} >
         <Switch>
@@ -31,11 +30,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.common.isAuthenticated
-})
-
-export default connect(mapStateToProps, {
+export default connect(null, {
   loadSelectedIndex,
   fetchDishes
 })(App)

@@ -1,10 +1,14 @@
 import { history } from '../utils/routerUtils'
 import * as types from '../constants/ActionTypes'
+import { updateSelectedIndex } from './navActions'
+
 
 export const login = data => dispatch => {
   const { username, password } = data
   if (username === 'happypeter' && password === '111111') {
-    history.push('/dashboard/dishes/new')
+    const target = '/dashboard/dishes/new'
+    history.push(target)
+    dispatch(updateSelectedIndex(target))
     dispatch({ type: types.LOGIN_SUCCESS })
     return Promise.resolve('登录成功！')
   } else {
